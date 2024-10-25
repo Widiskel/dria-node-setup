@@ -21,6 +21,7 @@ wget https://raw.githubusercontent.com/Widiskel/dria-node-setup/refs/heads/main/
 ```
 
 Official Setup: https://github.com/0xmoei/Dria-Node
+
 Twitter: https://x.com/driaforall/status/1838250850155667716
 
 ## SUPPORT
