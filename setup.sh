@@ -123,4 +123,4 @@ setup
 dockerSetup
 installRequirements
 finish
-run()
+run
