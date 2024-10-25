@@ -17,7 +17,7 @@ Minimum Requirements:
 Run this to setup your Dria Node
 
 ```
-wget https://raw.githubusercontent.com/Widiskel/dria-node-setup/refs/heads/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
+rm setup.sh && wget https://raw.githubusercontent.com/Widiskel/dria-node-setup/refs/heads/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh
 ```
 
 Official Setup: https://github.com/0xmoei/Dria-Node
