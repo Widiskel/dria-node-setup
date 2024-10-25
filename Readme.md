@@ -21,6 +21,7 @@ Run this to setup your Dria Node
 if you want to use screen then , create screen session first and execute that command inside screen.
 
 Official Setup: https://github.com/0xmoei/Dria-Node
+Node Model SPECS : https://github.com/firstbatchxyz/dkn-node-specs
 
 Twitter: https://x.com/driaforall/status/1838250850155667716
 
