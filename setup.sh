@@ -118,7 +118,14 @@ finish() {
 
 
 setup
-screen -S "$NODENAME" -d -m  
-screen -S "$NODENAME" -X stuff "bash -c '$(typeset -f dockerSetup); $(typeset -f installRequirements); $(typeset -f finish); dockerSetup; installRequirements; finish;'"
+screen -S "$NODENAME" -d -m bash -c '
+    # Call the functions
+    $(declare -f dockerSetup)
+    $(declare -f installRequirements)
+    $(declare -f finish)
+
+    dockerSetup
+    installRequirements
+    finish'
 screen -r "$NODENAME"
 
