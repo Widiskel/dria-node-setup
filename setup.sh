@@ -101,9 +101,9 @@ finish() {
             echo "-> DONE. Now your node will start Downloading Model files and Testing them. Each model must pass its test, and it only depends on your system specification."
             echo ""
             echo "Useful Commands:"
-            echo "- Restart your Dria Node: ./dkn-compute-launcher"
-            echo "- Delete your Node: cd \$HOME/node/$NODENAME && rm -r dkn-compute-node"
-            echo ""
+            echo "- Restart your Dria Node: './dkn-compute-launcher'"
+            echo "- Delete your Node: 'cd \$HOME/node/$NODENAME && rm -r dkn-compute-node'"
+            echo "- If you want to see this again run 'cat ~/node/dria/dkn-compute-node/help.txt'"
         } > help.txt
     fi
     cat help.txt
