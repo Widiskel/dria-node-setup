@@ -108,7 +108,7 @@ finish() {
             echo ""
             echo "Useful Commands:"
             echo "- Restart your Dria Node: ./dkn-compute-launcher"
-            echo "- Delete your Node: cd \$HOME && rm -r dkn-compute-node"
+            echo "- Delete your Node: cd \$HOME/node/$NODENAME && rm -r dkn-compute-node && screen -XS $NODENAME quit"
             echo ""
             echo "To exit from this Screen press Ctrl + A + D"
         } > help.txt
