@@ -10,13 +10,6 @@ setup() {
 
     echo "Updating & Upgrading Packages..."
     sudo apt update -y && sudo apt upgrade -y
-    if ! command -v screen &> /dev/null; then
-        echo "Installing Screen..."
-        sudo apt install -y screen
-        echo "Screen installed successfully."
-    else
-        echo "Screen is already installed."
-    fi
 
     cd ~
     if [ -d "node" ]; then
@@ -34,7 +27,6 @@ setup() {
         echo "Created the '$NODENAME' directory."
     fi
     cd $NODENAME
-    screen -S $NODENAME
 }
 
 dockerSetup(){
@@ -109,9 +101,8 @@ finish() {
             echo ""
             echo "Useful Commands:"
             echo "- Restart your Dria Node: ./dkn-compute-launcher"
-            echo "- Delete your Node: cd \$HOME/node/$NODENAME && rm -r dkn-compute-node && screen -XS $NODENAME quit"
+            echo "- Delete your Node: cd \$HOME/node/$NODENAME && rm -r dkn-compute-node"
             echo ""
-            echo "To exit from this Screen press Ctrl + A + D"
         } > help.txt
     fi
     cat help.txt
@@ -124,7 +115,6 @@ run() {
         ./dkn-compute-launcher
     else
         echo "LFG"
-        echo "To exit from this Screen press Ctrl + A + D"
     fi
 }
 
