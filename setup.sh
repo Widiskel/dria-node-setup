@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODENAME="DRIA"
+NODENAME="dria"
 GREENCOLOR="\e[32m"
 DEFAULTCOLOR="\e[0m"
 
@@ -27,7 +27,13 @@ setup() {
     fi
     cd node
 
-    mkdir dria && cd dria
+    if [ -d "$NODENAME" ]; then
+        echo "The '$NODENAME' directory already exists."
+    else
+        mkdir $NODENAME
+        echo "Created the '$NODENAME' directory."
+    fi
+    cd $NODENAME
 }
 
 dockerSetup(){
