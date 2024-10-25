@@ -88,6 +88,7 @@ finish() {
     if ! [ -f help.txt ]; then
         {
             echo "Setup Complete"
+            echo "Your $NODENAME path is on ~/node/dria/"
             echo ""
             echo "Follow this guide to start your node:"
             echo "To start Your Node run ./dkn-compute-launcher"
