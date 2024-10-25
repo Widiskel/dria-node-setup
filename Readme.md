@@ -17,6 +17,8 @@ Minimum Requirements:
 Run this to setup your Dria Node
 
 ```
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install -y screen
 [ -f setup.sh ] && rm setup.sh; wget https://raw.githubusercontent.com/Widiskel/dria-node-setup/refs/heads/master/setup.sh && sudo chmod +x setup.sh && ./setup.sh || echo "Error: setup.sh could not be downloaded."
 ```
 

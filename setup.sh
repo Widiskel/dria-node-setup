@@ -34,6 +34,7 @@ setup() {
         echo "Created the '$NODENAME' directory."
     fi
     cd $NODENAME
+    screen -S $NODENAME
 }
 
 dockerSetup(){
@@ -117,15 +118,19 @@ finish() {
 }
 
 
+run() {
+    read -p "Do you want to run it? (y/n): " response
+    if [[ $response == "y" ]]; then
+        ./dkn-compute-launcher
+    else
+        echo "LFG"
+        echo "To exit from this Screen press Ctrl + A + D"
+    fi
+}
+
+
 setup
-screen -S "$NODENAME" -d -m bash -c '
-    # Call the functions
-    $(declare -f dockerSetup)
-    $(declare -f installRequirements)
-    $(declare -f finish)
-
-    dockerSetup
-    installRequirements
-    finish'
-screen -r "$NODENAME"
-
+dockerSetup
+installRequirements
+finish
+run()
