@@ -58,6 +58,14 @@ installRequirements(){
     echo "Installing Package Required by $NODENAME"
     sleep 2
 
+    if ! command -v unzip &> /dev/null; then
+        echo "Installing Unzip..."
+        sudo apt-install unzip -y
+        echo "Unzip Installed"
+    else
+        echo "Unzip is already installed."
+    fi
+
 
     if ! command -v ollama &> /dev/null; then
         echo "Installing Ollama..."
