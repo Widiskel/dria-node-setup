@@ -26,10 +26,10 @@ Node Model SPECS : https://github.com/firstbatchxyz/dkn-node-specs
 
 Twitter: https://x.com/driaforall/status/1838250850155667716
 
-#Earn Node-Keeper Role
-Join [Discord](https://discord.gg/dria) and Fill the Form to receive role
+## Earn Node-Keeper Role
+Join [Discord](https://discord.gg/dria) and Fill the [Form](https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK090ejc4dg5x1ztb_yAOxGz5o1V8JUqDa-o3AwV1Lq7NpMA/viewform?pli=1) to receive role
 
-#Check Your Point
+## Check Your Point
 Steps Leaderboard : https://steps.leaderboard.dria.co/
 
 ## SUPPORT
