@@ -60,7 +60,7 @@ installRequirements(){
 
     if ! command -v unzip &> /dev/null; then
         echo "Installing Unzip..."
-        sudo apt-install unzip -y
+        sudo apt install unzip -y
         echo "Unzip Installed"
     else
         echo "Unzip is already installed."
