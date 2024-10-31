@@ -24,6 +24,8 @@ Official Setup: https://github.com/0xmoei/Dria-Node
 
 Node Model SPECS : https://github.com/firstbatchxyz/dkn-node-specs
 
+Gemini Api Key : https://aistudio.google.com/app/apikey
+
 Twitter: https://x.com/driaforall/status/1838250850155667716
 
 ## Earn Node-Keeper Role
