@@ -33,11 +33,15 @@ setup() {
 backUp(){
     echo "Back up existing env"
     
-    if [ -f "dkn-compute-node/.env" ]; then
-        cp dkn-compute-node/.env .
-        echo ".env file backed up."
+    if [ -f ".env" ]; then
+        echo ".env file already exists in the current directory, skipping backup."
     else
-        echo ".env file does not exist, skipping backup."
+        if [ -f "dkn-compute-node/.env" ]; then
+            cp dkn-compute-node/.env .
+            echo ".env file backed up from dkn-compute-node."
+        else
+            echo ".env file does not exist in dkn-compute-node, skipping backup."
+        fi
     fi
     
     if [ -d "dkn-compute-node" ]; then
