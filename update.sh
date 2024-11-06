@@ -31,6 +31,7 @@ setup() {
 
 
 backUp(){
+    pwd
     echo "Back up existing env"
     
     if [ -f ".env" ]; then
@@ -69,10 +70,11 @@ installRequirements(){
 
         if [ "$ARCH" == "arm64" ]; then
             echo "Architecture is arm64, downloading arm64 version."
-            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-macOS-arm64.zip
+            # for aarch64, use arm64
+            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-linux-arm64.zip
         elif [ "$ARCH" == "x86_64" ]; then
             echo "Architecture is x86_64, downloading amd64 version."
-            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-macOS-amd64.zip
+            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-linux-amd64.zip
         else
             echo "Unknown architecture: $ARCH. Exiting."
             exit 1
