@@ -58,6 +58,29 @@ backUp(){
     else
         echo "dkn-compute-node.zip file does not exist, skipping removal."
     fi
+
+    if ! command -v lsof &> /dev/null; then
+        echo "lsof is not installed. Installing..."
+        sudo apt-get install -y lsof
+        echo "lsof installation complete."
+    else
+        echo "lsof is already installed."
+    fi
+
+    process_name="ollama"
+    process_id=$(lsof -t -i | grep -i "$process_name")
+    if [ -z "$process_id" ]; then
+        echo "$process_name is not running or not using any ports."
+    else
+        echo "$process_name is running with PID: $process_id. Killing the process..."
+        kill -9 "$process_id"
+        
+        if [ $? -eq 0 ]; then
+            echo "$process_name process has been killed."
+        else
+            echo "Failed to kill $process_name process."
+        fi
+    fi
 }
 
 
