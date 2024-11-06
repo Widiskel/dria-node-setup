@@ -61,7 +61,18 @@ installRequirements(){
     echo "Installing $NODENAME Compute Node"
     if [ ! -d "dkn-compute-node" ] && [ ! -f "dkn-compute-node.zip" ]; then
         echo "Downloading dkn-compute-node.zip"
-        curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-macOS-arm64.zip
+        ARCH=$(uname -m)
+
+        if [ "$ARCH" == "arm64" ]; then
+            echo "Architecture is arm64, downloading arm64 version."
+            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-macOS-arm64.zip
+        elif [ "$ARCH" == "x86_64" ]; then
+            echo "Architecture is x86_64, downloading amd64 version."
+            curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-macOS-amd64.zip
+        else
+            echo "Unknown architecture: $ARCH. Exiting."
+            exit 1
+        fi
         echo "Unzipping dkn-compute-node.zip"
         unzip dkn-compute-node.zip 
         rm dkn-compute-node.zip 
