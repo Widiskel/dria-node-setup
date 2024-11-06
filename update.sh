@@ -72,6 +72,8 @@ installRequirements(){
             cd dkn-compute-node
         fi
     fi
+    echo "Copying Back Up Environment."
+    cp -r ../.env .
     echo "$NODENAME Compute Node Installed"
 }
 
