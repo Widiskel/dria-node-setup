@@ -28,6 +28,13 @@ Gemini Api Key : https://aistudio.google.com/app/apikey
 
 Twitter: https://x.com/driaforall/status/1838250850155667716
 
+## Update guide
+Run this to setup your Dria Node
+```
+[ -f update.sh ] && rm update.sh; wget https://raw.githubusercontent.com/Widiskel/dria-node-setup/refs/heads/master/update.sh && sudo chmod +x update.sh && ./update.sh || echo "Error: update.sh could not be downloaded."
+```
+if you use screen then , attach to your screen session first, cancel existing process and execute that command inside screen.
+
 ## Earn Node-Keeper Role
 Join [Discord](https://discord.gg/dria) and Fill the [Form](https://docs.google.com/forms/u/0/d/e/1FAIpQLSeK090ejc4dg5x1ztb_yAOxGz5o1V8JUqDa-o3AwV1Lq7NpMA/viewform?pli=1) to receive role
 
